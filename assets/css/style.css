@@ -1,1 +1,19 @@
 /* Styling for the main content of the website */
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* variables for colors and fonts */
+
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Nunito', sans-serif;
+    --primary-color: #4A90E2;
+    --completed-color: #6FCF97;
+    --in-progress-color: #F2C94C;
+    --incomplete-color: #EB5757;
+    --rewards-color: #9B8AFB;
+    --main-background-color: #F4FAF7;
+    --main-text-color: #263238;
+}
