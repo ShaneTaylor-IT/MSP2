@@ -17,3 +17,26 @@
     --main-background-color: #F4FAF7;
     --main-text-color: #263238;
 }
+
+/* Colours for tests. To be removed later */
+.test-primary {
+    background-color: var(--primary-color);
+}
+.test-success {
+    background-color: var(--completed-color);
+}
+.test-danger {
+    background-color: var(--incomplete-color);
+}
+.test-warning {
+    background-color: var(--in-progress-color);
+}
+.test-info {
+    background-color: var(--rewards-color);
+}
+.test-light {
+    background-color: var(--main-background-color);
+}
+.test-dark {
+    background-color: var(--main-text-color);
+}
