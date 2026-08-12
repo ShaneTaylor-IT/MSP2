@@ -40,3 +40,5 @@
 .test-dark {
     background-color: var(--main-text-color);
 }
+
+/* Remove Bootstrap default styles for buttons and inputs and replace with custom styles */
