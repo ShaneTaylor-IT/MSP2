@@ -45,10 +45,65 @@
     </nav>
 
     <!-- Main content -->
-     <main class="container my-5">
-        <h1>Welcome to the Chore Manager</h1>
-        <p>This is the main content area.</p>
-     </main>
+    <main class="container my-5">
+        <section class="mb-5">
+            <h1>Manage Members</h1>
+            <p>Here you can manage the members of your household or edit your profile.</p>
+        </section>
+        <section class="mb-5">
+            <div class="card p-4">
+                <div class="d-flex align-items-center gap-4">
+                    <div id="profileAvatar" class="rounded-circle bg-secondary" style="width: 100px; height: 100px;">
+                    </div>
+                    <div>
+                        <h2 id="profileName">John Doe</h2>
+                        <p id="profileRole">Household Member</p>
+                        <div class="border rounded p-2 bg-light">
+                            <p class="mb-0">Tasks completed:
+                                <span id="tasksCompleted">0</span>
+                                /
+                                <span id="totalTasks">0</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 text-end">
+                    <button class="btn btn-primary" id="editProfileBtn">Edit Profile</button>
+                </div>
+            </div>
+        </section>
+        <section class="mb-5">
+            <h2>Household Members</h2>
+            <div class="row mt-4" id="membersContainer">
+                <div class="col-md-4 mb-3 member-card">
+                    <div class="card p-3 text-center">
+                        <div class="rounded-circle mx-auto mb-3"
+                            style="width: 70px; height: 70px; background-color: #ccc;" data-avatar>
+                        </div>
+                        <h5 class="mb-1" data-display-name>User display name</h5>
+                        <p class="mb-0" data-weekly-chores>
+                            Chores completed for the day: 0
+                        </p>
+                        <p class="mb-2" data-streak>
+                            Day streak: 0
+                        </p>
+                    </div>
+                </div>
+
+                <!-- More member cards will be duplicated here by JS -->
+
+            </div>
+        </section>
+                <section class="mb-5">
+            <h2>Household Comments</h2>
+            <textarea class="form-control" rows="5" placeholder="Add comments here..."></textarea>
+        </section>
+        <section class="mb-5">
+            <h2>Household Suggestions</h2>
+            <textarea class="form-control" rows="5" placeholder="Add suggestions here..."></textarea>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="mt-auto">
