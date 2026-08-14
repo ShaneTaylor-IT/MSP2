@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chore Manager - Add Chore</title>
 
 
     <!-- Bootstrap CSS -->
@@ -18,26 +18,29 @@
 
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="home.html">Chore Manager</a> <!-- Logo will go here -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="members.html">Members</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="schedule.html">Schedule</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="add-chore.html">Add Chore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
                     </li>
                 </ul>
             </div>
@@ -46,9 +49,125 @@
 
     <!-- Main content -->
      <main class="container my-5">
-        <h1>Welcome to the Chore Manager</h1>
-        <p>This is the main content area.</p>
-     </main>
+
+    <!-- Page Title -->
+    <section class="mb-4">
+        <h1>Add a Chore</h1>
+        <p>Complete the form below to add a new chore to your household schedule.</p>
+    </section>
+
+    <!-- Quick Templates -->
+    <section class="mb-4">
+        <h3>Quick Templates</h3>
+        <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-outline-secondary template-btn" data-template="hoover">Hoover rooms</button>
+            <button type="button" class="btn btn-outline-secondary template-btn" data-template="laundry">Do laundry</button>
+            <button type="button" class="btn btn-outline-secondary template-btn" data-template="grass">Cut the grass</button>
+            <button type="button" class="btn btn-outline-secondary template-btn" data-template="bathroom">Clean the bathroom</button>
+            <button type="button" class="btn btn-outline-secondary template-btn" data-template="shopping">Weekly shopping</button>
+            <button type="button" class="btn btn-outline-secondary template-btn" data-template="mop">Mop floors</button>
+        </div>
+    </section>
+
+    <!-- Chore Form -->
+    <section class="mb-5">
+        <form id="addChoreForm">
+
+            <!-- Chore Title -->
+            <div class="mb-3">
+                <label class="form-label">Chore Title</label>
+                <input type="text" class="form-control" id="choreTitle">
+            </div>
+
+            <!-- Assign To -->
+            <div class="mb-3">
+                <label class="form-label">Assign To</label>
+                <div class="d-flex gap-2" id="assignTo">
+                    <!-- Example member bubbles -->
+                    <button type="button" class="member-select rounded-circle" data-member="ST">ST</button>
+                    <button type="button" class="member-select rounded-circle" data-member="JB">JB</button>
+                    <button type="button" class="member-select rounded-circle" data-member="BS">BS</button>
+                </div>
+            </div>
+
+            <!-- Priority -->
+            <div class="mb-3">
+                <label class="form-label">Priority</label>
+                <div class="d-flex gap-3">
+                    <label><input type="radio" name="priority" value="low"> Low</label>
+                    <label><input type="radio" name="priority" value="medium"> Medium</label>
+                    <label><input type="radio" name="priority" value="high"> High</label>
+                </div>
+            </div>
+
+            <!-- Recurrence -->
+            <div class="mb-3">
+                <label class="form-label">Recurrence</label>
+                <div class="d-flex flex-wrap gap-3">
+                    <label><input type="radio" name="recurrence" value="once"> Once</label>
+                    <label><input type="radio" name="recurrence" value="daily"> Daily</label>
+                    <label><input type="radio" name="recurrence" value="weekly"> Weekly</label>
+                    <label><input type="radio" name="recurrence" value="monthly"> Monthly</label>
+                    <label><input type="radio" name="recurrence" value="fortnightly"> Fortnightly</label>
+                </div>
+            </div>
+
+            <!-- Day -->
+            <div class="mb-3">
+                <label class="form-label">Day</label>
+                <div class="d-flex flex-wrap gap-2" id="choreDay">
+                    <button type="button" class="day-select" data-day="monday">Mon</button>
+                    <button type="button" class="day-select" data-day="tuesday">Tue</button>
+                    <button type="button" class="day-select" data-day="wednesday">Wed</button>
+                    <button type="button" class="day-select" data-day="thursday">Thu</button>
+                    <button type="button" class="day-select" data-day="friday">Fri</button>
+                    <button type="button" class="day-select" data-day="saturday">Sat</button>
+                    <button type="button" class="day-select" data-day="sunday">Sun</button>
+                </div>
+            </div>
+
+            <!-- Time -->
+            <div class="mb-3">
+                <label class="form-label">Start Time</label>
+                <input type="time" class="form-control" id="choreTime">
+            </div>
+
+            <!-- Duration -->
+            <div class="mb-3">
+                <label class="form-label">Duration (minutes)</label>
+                <select class="form-select" id="choreDuration">
+                    <option value="15">15 min</option>
+                    <option value="30">30 min</option>
+                    <option value="45">45 min</option>
+                    <option value="60">60 min</option>
+                </select>
+            </div>
+
+            <!-- Notes -->
+            <div class="mb-3">
+                <label class="form-label">Notes</label>
+                <textarea class="form-control" id="choreNotes" rows="3"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-3 mt-4">
+                <button type="button" class="btn btn-outline-danger w-50">Cancel</button>
+                <button type="submit" class="btn btn-success w-50" id="confirmChoreBtn">Confirm</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Chore Preview -->
+    <section class="mb-5">
+        <div class="card p-3" id="chorePreview">
+            <h4>Chore Preview</h4>
+            <p class="text-muted">Your chore details will appear here once completed.</p>
+        </div>
+    </section>
+
+</main>
+
 
     <!-- Footer -->
     <footer class="mt-auto">
