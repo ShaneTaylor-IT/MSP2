@@ -22,6 +22,17 @@ body {
     padding-top: 70px; /* Adjust this value based on the height of your navbar */
 }
 
+/* Adding font styles to the body and headings */
+body {
+    font-family: var(--primary-font);
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+}
+
 /* Colours for tests. To be removed later */
 .test-primary {
     background-color: var(--primary-color);
