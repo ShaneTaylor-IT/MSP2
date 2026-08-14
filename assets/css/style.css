@@ -18,6 +18,10 @@
     --main-text-color: #263238;
 }
 
+body {
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+}
+
 /* Colours for tests. To be removed later */
 .test-primary {
     background-color: var(--primary-color);
