@@ -42,3 +42,8 @@
 }
 
 /* Remove Bootstrap default styles for buttons and inputs and replace with custom styles */
+
+#logo {
+    height: 40px;
+    width: auto;
+}

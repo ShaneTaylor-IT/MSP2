@@ -14,13 +14,19 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+
 </head>
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">Chore Manager</a> <!-- Logo will go here -->
+            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png" alt="Chore Manager Logo"></a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +54,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="py-5">
+    <header class="py-5 my-5">
         <div class="container">
             <div class="row">
                 <h1 class="display-4">Chore Manager</h1>
@@ -105,7 +111,7 @@
                 <div class="col-md-auto">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h5 class="card-title">Wed<br> 23</h5>  
+                            <h5 class="card-title">Wed<br> 23</h5>
                             <p class="card-text">5/5</p>
                             <P class="card-text">Progress bar will go here</p>
                         </div>
@@ -123,7 +129,7 @@
                 <div class="col-md-auto">
                     <div class="card text-center">
                         <div class="card-body">
-                            <h5 class="card-title">Fri<br> 25</h5>  
+                            <h5 class="card-title">Fri<br> 25</h5>
                             <p class="card-text">2/2</p>
                             <P class="card-text">Progress bar will go here</p>
                         </div>
@@ -149,7 +155,8 @@
                 </div>
                 <div class="col-12">
                     <h3>Legend</h3>
-                    <p>Green = Completed, Yellow = In Progress, Red = Incomplete</p> <!-- This will show coloured bar for visual reference -->
+                    <p>Green = Completed, Yellow = In Progress, Red = Incomplete</p>
+                    <!-- This will show coloured bar for visual reference -->
                 </div>
             </div>
         </div>
