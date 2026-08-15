@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-        <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
@@ -26,7 +26,8 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png" alt="Chore Manager Logo"></a> <!-- Logo will go here -->
+            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png"
+                    alt="Chore Manager Logo"></a> <!-- Logo will go here -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                        <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="members.html">Members</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="schedule.html">Schedule</a>
+                        <a class="nav-link active" aria-current="page" href="schedule.html">Schedule</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="add-chore.html">Add Chore</a>
@@ -53,114 +54,116 @@
         </div>
     </nav>
 
-<!-- Main content -->
-<main class="container my-5">
+    <!-- Main content -->
+    <main class="d-flex flex-column min-vh-100">
+        <div class="container my-5">
+            <div class="row">
+                <section class="mb-4">
+                    <h1>Weekly schedule</h1>
+                    <p>Here you can view the weekly schedule for your household chores.</p>
+                </section>
 
-    <section class="mb-4">
-        <h1>Weekly schedule</h1>
-        <p>Here you can view the weekly schedule for your household chores.</p>
-    </section>
+                <!-- Filters -->
+                <section class="mb-4">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="filterMember" class="form-label">Filter by Member</label>
+                            <select id="filterMember" class="form-select">
+                                <option value="">All Members</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="filterCategory" class="form-label">Filter by Category</label>
+                            <select id="filterCategory" class="form-select">
+                                <option value="">All Categories</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
 
-    <!-- Filters -->
-    <section class="mb-4">
-        <div class="row g-3">
-            <div class="col-md-6">
-                <label for="filterMember" class="form-label">Filter by Member</label>
-                <select id="filterMember" class="form-select">
-                    <option value="">All Members</option>
-                </select>
+                <!-- Week Range -->
+                <section class="mb-4 text-center">
+                    <h4 class="mb-0" id="weekRange">July 21-27</h4>
+                </section>
+
+                <!-- Add Chore Button -->
+                <section class="mb-4">
+                    <button class="btn btn-dark w-100">+ Add Chore</button>
+                </section>
+
+                <!-- Weekly schedule list -->
+                <section id="weeklySchedule">
+
+                    <!-- Monday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Monday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="monday"></div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Tuesday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="tuesday"></div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Wednesday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="wednesday"></div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Thursday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="thursday"></div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Friday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="friday"></div>
+                    </div>
+
+                    <!-- Saturday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Saturday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="saturday"></div>
+                    </div>
+
+                    <!-- Sunday -->
+                    <div class="day-block card mb-4 p-3">
+                        <h4 class="mb-2 text-center">Sunday <span>(0/0)</span></h4>
+                        <div class="mt-3" data-day="sunday"></div>
+                    </div>
+
+                </section>
+
+                <!-- Weekly Summary -->
+                <section class="mb-4" id="weeklySummary">
+                    <div class="card p-3">
+                        <div class="row text-center">
+                            <div class="col">
+                                <p class="mb-1 fw-bold">Total</p>
+                                <span id="summaryTotal">0</span>
+                            </div>
+                            <div class="col">
+                                <p class="mb-1 fw-bold">Completed</p>
+                                <span id="summaryCompleted">0</span>
+                            </div>
+                            <div class="col">
+                                <p class="mb-1 fw-bold">Pending</p>
+                                <span id="summaryPending">0</span>
+                            </div>
+                            <div class="col">
+                                <p class="mb-1 fw-bold">Overdue</p>
+                                <span id="summaryOverdue">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="col-md-6">
-                <label for="filterCategory" class="form-label">Filter by Category</label>
-                <select id="filterCategory" class="form-select">
-                    <option value="">All Categories</option>
-                </select>
-            </div>
         </div>
-    </section>
-
-    <!-- Week Range -->
-    <section class="mb-4 text-center">
-        <h4 class="mb-0" id="weekRange">July 21-27</h4>
-    </section>
-
-    <!-- Add Chore Button -->
-    <section class="mb-4">
-        <button class="btn btn-dark w-100">+ Add Chore</button>
-    </section>
-
-    <!-- Weekly schedule list -->
-    <section id="weeklySchedule">
-
-        <!-- Monday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Monday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="monday"></div>
-        </div>
-
-        <!-- Tuesday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Tuesday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="tuesday"></div>
-        </div>
-
-        <!-- Wednesday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Wednesday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="wednesday"></div>
-        </div>
-
-        <!-- Thursday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Thursday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="thursday"></div>
-        </div>
-
-        <!-- Friday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Friday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="friday"></div>
-        </div>
-
-        <!-- Saturday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Saturday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="saturday"></div>
-        </div>
-
-        <!-- Sunday -->
-        <div class="day-block card mb-4 p-3">
-            <h4 class="mb-2 text-center">Sunday <span class="text-muted">(0/0)</span></h4>
-            <div class="mt-3" data-day="sunday"></div>
-        </div>
-
-    </section>
-
-    <!-- Weekly Summary -->
-    <section class="mb-4" id="weeklySummary">
-        <div class="card p-3">
-            <div class="row text-center">
-                <div class="col">
-                    <p class="mb-1 fw-bold">Total</p>
-                    <span id="summaryTotal">0</span>
-                </div>
-                <div class="col">
-                    <p class="mb-1 fw-bold">Completed</p>
-                    <span id="summaryCompleted">0</span>
-                </div>
-                <div class="col">
-                    <p class="mb-1 fw-bold">Pending</p>
-                    <span id="summaryPending">0</span>
-                </div>
-                <div class="col">
-                    <p class="mb-1 fw-bold">Overdue</p>
-                    <span id="summaryOverdue">0</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
+    </main>
 
 
     <!-- Footer -->
@@ -177,28 +180,6 @@
 
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/57eeae5219.js" crossorigin="anonymous"></script>
-
-    <!-- JS script provided by CodeInstitute for collapsing nav bar on smaller screens when using Bootstrap-->
-    <script>
-        document
-            .querySelectorAll(".navbar-collapse .nav-link")
-            .forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    let section = document.querySelector(e.target.getAttribute("href"));
-                    if (section) {
-                        e.preventDefault(); // Prevent default anchor click behavior
-                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
-                        window.scroll({
-                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                            behavior: "smooth",
-                        });
-                        document
-                            .querySelector(".navbar-collapse")
-                            .classList.remove("show"); // Collapse navbar
-                    }
-                });
-            });
-    </script>
 
     <!-- Custom JS -->
     <script src="assets/js/schedule.js"></script>

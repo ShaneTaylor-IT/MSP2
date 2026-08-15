@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chore Manager - Members</title>
 
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -14,7 +13,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-        <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
@@ -26,7 +25,8 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png" alt="Chore Manager Logo"></a> <!-- Logo will go here -->
+            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png"
+                    alt="Chore Manager Logo"></a> <!-- Logo will go here -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,10 +34,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                        <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="members.html">Members</a>
+                        <a class="nav-link active" aria-current="page" href="members.html">Members</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="schedule.html">Schedule</a>
@@ -54,64 +54,68 @@
     </nav>
 
     <!-- Main content -->
-    <main class="d-flex flex-column min-vh-100 container my-5">
-        <section class="mb-5">
-            <h1>Manage Members</h1>
-            <p>Here you can manage the members of your household or edit your profile.</p>
-        </section>
-        <section class="mb-5">
-            <div class="card p-4">
-                <div class="d-flex align-items-center gap-4">
-                    <div id="profileAvatar" class="rounded-circle bg-secondary" style="width: 100px; height: 100px;">
-                    </div>
-                    <div>
-                        <h2 id="profileName">John Doe</h2>
-                        <p id="profileRole">Household Member</p>
-                        <div class="border rounded p-2 bg-light">
-                            <p class="mb-0">Tasks completed:
-                                <span id="tasksCompleted">0</span>
-                                /
-                                <span id="totalTasks">0</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-3 text-end">
-                    <button class="btn btn-primary" id="editProfileBtn">Edit Profile</button>
-                </div>
-            </div>
-        </section>
-        <section class="mb-5">
-            <h2>Household Members</h2>
-            <div class="row mt-4" id="membersContainer">
-                <div class="col-md-4 mb-3 member-card">
-                    <div class="card p-3 text-center">
-                        <div class="rounded-circle mx-auto mb-3"
-                            style="width: 70px; height: 70px; background-color: #ccc;" data-avatar>
-                        </div>
-                        <h5 class="mb-1" data-display-name>User display name</h5>
-                        <p class="mb-0" data-weekly-chores>
-                            Chores completed for the day: 0
-                        </p>
-                        <p class="mb-2" data-streak>
-                            Day streak: 0
-                        </p>
-                    </div>
-                </div>
-
-                <!-- More member cards will be duplicated here by JS -->
-
-            </div>
-        </section>
+    <main class="d-flex flex-column min-vh-100">
+        <div class="container my-5">
+            <div class="row">
                 <section class="mb-5">
-            <h2>Household Comments</h2>
-            <textarea class="form-control" rows="5" placeholder="Add comments here..."></textarea>
-        </section>
-        <section class="mb-5">
-            <h2>Household Suggestions</h2>
-            <textarea class="form-control" rows="5" placeholder="Add suggestions here..."></textarea>
-        </section>
+                    <h1>Manage Members</h1>
+                    <p>Here you can manage the members of your household or edit your profile.</p>
+                </section>
+                <section class="mb-5">
+                    <div class="card p-4">
+                        <div class="d-flex align-items-center gap-4">
+                            <div id="profileAvatar" class="rounded-circle bg-secondary"
+                                style="width: 100px; height: 100px;">
+                            </div>
+                            <div>
+                                <h2 id="profileName">John Doe</h2>
+                                <p id="profileRole">Household Member</p>
+                                <div class="border rounded p-2 bg-light">
+                                    <p class="mb-0">Tasks completed:
+                                        <span id="tasksCompleted">0</span>
+                                        /
+                                        <span id="totalTasks">0</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-primary" id="editProfileBtn">Edit Profile</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="mb-5">
+                    <h2>Household Members</h2>
+                    <div class="row mt-4" id="membersContainer">
+                        <div class="col-md-4 mb-3 member-card">
+                            <div class="card p-3 text-center">
+                                <div class="rounded-circle mx-auto mb-3"
+                                    style="width: 70px; height: 70px; background-color: #ccc;" data-avatar>
+                                </div>
+                                <h5 class="mb-1" data-display-name>User display name</h5>
+                                <p class="mb-0" data-weekly-chores>
+                                    Chores completed for the day: 0
+                                </p>
+                                <p class="mb-2" data-streak>
+                                    Day streak: 0
+                                </p>
+                            </div>
+                        </div>
 
+                        <!-- More member cards will be duplicated here by JS -->
+
+                    </div>
+                </section>
+                <section class="mb-5">
+                    <h2>Household Comments</h2>
+                    <textarea class="form-control" rows="5" placeholder="Add comments here..."></textarea>
+                </section>
+                <section class="mb-5">
+                    <h2>Household Suggestions</h2>
+                    <textarea class="form-control" rows="5" placeholder="Add suggestions here..."></textarea>
+                </section>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -128,28 +132,6 @@
 
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/57eeae5219.js" crossorigin="anonymous"></script>
-
-    <!-- JS script provided by CodeInstitute for collapsing nav bar on smaller screens when using Bootstrap-->
-    <script>
-        document
-            .querySelectorAll(".navbar-collapse .nav-link")
-            .forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    let section = document.querySelector(e.target.getAttribute("href"));
-                    if (section) {
-                        e.preventDefault(); // Prevent default anchor click behavior
-                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
-                        window.scroll({
-                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                            behavior: "smooth",
-                        });
-                        document
-                            .querySelector(".navbar-collapse")
-                            .classList.remove("show"); // Collapse navbar
-                    }
-                });
-            });
-    </script>
 
     <!-- Custom JS -->
     <script src="assets/js/members.js"></script>

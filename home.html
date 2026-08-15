@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chore Manager - Home</title>
 
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -26,7 +25,8 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png" alt="Chore Manager Logo"></a> 
+            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png"
+                    alt="Chore Manager Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -73,7 +73,7 @@
                     <h2>Welcome to the Chore Manager</h2>
                     <p>This is the main content area. Here you can find information about managing chores, adding new
                         tasks, and tracking progress.</p>
-                    <button class="btn btn-primary">Add chore</button>
+                    <a href="add-chore.html" class="btn btn-primary">Add chore</a>
                 </div>
                 <div class="col-md-6">
                     <ul class="list-group">
@@ -85,93 +85,121 @@
             </div>
         </div>
         <hr>
-        <div class="container my-5">
-            <div class="row gap-3">
-                <div class="col-12">
-                    <h3>Weekly Summary</h3>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Mon<br> 21</h5>
-                            <p class="card-text">4/4</p>
-                            <P class="card-text">Progress bar will go here</p>
+        <section id="weeklySummary">
+            <div class="container my-5">
+                <div class="row gap-3">
+                    <div class="col-12">
+                        <h3>Weekly Summary</h3>
+                    </div>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Mon<br> 21</h5>
+                                <p class="card-text">4/4</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Tues<br> 22</h5>
-                            <p class="card-text">7/7</p>
-                            <P class="card-text">Progress bar will go here</p>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Tues<br> 22</h5>
+                                <p class="card-text">7/7</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Wed<br> 23</h5>
-                            <p class="card-text">5/5</p>
-                            <P class="card-text">Progress bar will go here</p>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Wed<br> 23</h5>
+                                <p class="card-text">5/5</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Thur<br> 24</h5>
-                            <p class="card-text">3/3</p>
-                            <P class="card-text">Progress bar will go here</p>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Thur<br> 24</h5>
+                                <p class="card-text">3/3</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Fri<br> 25</h5>
-                            <p class="card-text">2/2</p>
-                            <P class="card-text">Progress bar will go here</p>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Fri<br> 25</h5>
+                                <p class="card-text">2/2</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Sat<br> 26</h5>
-                            <p class="card-text">2/2</p>
-                            <P class="card-text">Progress bar will go here</p>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Sat<br> 26</h5>
+                                <p class="card-text">2/2</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Sun<br> 27</h5>
-                            <p class="card-text">2/2</p>
-                            <P class="card-text">Progress bar will go here</p>
+                    <div class="col-md">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title">Sun<br> 27</h5>
+                                <p class="card-text">2/2</p>
+                                <P class="card-text">Progress bar will go here</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <h3>Legend</h3>
-                    <p>Green = Completed, Yellow = In Progress, Red = Incomplete</p>
-                    <!-- This will show coloured bar for visual reference -->
+                    <div class="col-12">
+                        <h3>Legend</h3>
+                        <p>Green = Completed, Yellow = In Progress, Red = Incomplete</p>
+                        <!-- This will show coloured bar for visual reference -->
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
         <hr>
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-6">
-                    <h3>Widget 1 left side</h3>
-                    <p>Weather widget content goes here.</p>
-                </div>
-                <div class="col-6">
-                    <h3>Widget 2 right side</h3>
-                    <p>To show list of the current days tasks and ticked completed tasks.</p>
+        <section id="widgets">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card p-3" id="weatherWidget">
+                            <h4>Weather</h4>
+                            <p class="card-text">Current weather in your area:</p>
+
+                            <ul class="list-group">
+                                <li class="list-group-item">Temperature: <span id="weatherTemp">--</span>°C</li>
+                                <li class="list-group-item">Condition: <span id="weatherCondition">--</span></li>
+                                <li class="list-group-item">Ideal for outdoor chores: <span id="weatherIdeal">--</span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="col-6">
+                        <div class="card p-3" id="rewardsWidget">
+                            <h4>Rewards</h4>
+                            <p class="card-text">Your current rewards:</p>
+
+                            <ul class="list-group">
+                                <li class="list-group-item">Total points: <span id="rewardPoints">--</span></li>
+                                <li class="list-group-item">Available rewards: <span id="availableRewards">--</span>
+                                </li>
+                                <li class="list-group-item">Redeem rewards: <span id="redeemRewards">--</span></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
     </main>
 
     <!-- Colour visual test. To be removed once colours are finalized -->
@@ -203,28 +231,6 @@
 
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/57eeae5219.js" crossorigin="anonymous"></script>
-
-    <!-- JS script provided by CodeInstitute for collapsing nav bar on smaller screens when using Bootstrap-->
-    <script>
-        document
-            .querySelectorAll(".navbar-collapse .nav-link")
-            .forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    let section = document.querySelector(e.target.getAttribute("href"));
-                    if (section) {
-                        e.preventDefault(); // Prevent default anchor click behavior
-                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
-                        window.scroll({
-                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                            behavior: "smooth",
-                        });
-                        document
-                            .querySelector(".navbar-collapse")
-                            .classList.remove("show"); // Collapse navbar
-                    }
-                });
-            });
-    </script>
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
