@@ -1,64 +1,138 @@
-/* Styling for the main content of the website */
-
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 /* variables for colors and fonts */
 
 :root {
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Nunito', sans-serif;
-    --primary-color: #4A90E2;
-    --completed-color: #6FCF97;
-    --in-progress-color: #F2C94C;
-    --incomplete-color: #EB5757;
+    --primary-color: #F7F3EA;
+    --secondary-color: #D8A84E;
+    --completed-color: #4CAF72;
+    --in-progress-color: #E9A23B;
+    --incomplete-color: #D65A5A; 
     --rewards-color: #9B8AFB;
-    --main-background-color: #F4FAF7;
-    --main-text-color: #263238;
-}
-
-body {
-    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+    --main-background-color: #302A25;
+    --secondary-background-color: #6b705c;
 }
 
 /* Adding font styles to the body and headings */
 body {
     font-family: var(--primary-font);
     background-color: var(--main-background-color);
-    color: var(--main-text-color);
+    color: var(--primary-color);
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--secondary-font);
+    color: var(--primary-color);
 }
 
-/* Colours for tests. To be removed later */
-.test-primary {
-    background-color: var(--primary-color);
-}
-.test-success {
-    background-color: var(--completed-color);
-}
-.test-danger {
-    background-color: var(--incomplete-color);
-}
-.test-warning {
-    background-color: var(--in-progress-color);
-}
-.test-info {
-    background-color: var(--rewards-color);
-}
-.test-light {
-    background-color: var(--main-background-color);
-}
-.test-dark {
-    background-color: var(--main-text-color);
-}
-
-/* Remove Bootstrap default styles for buttons and inputs and replace with custom styles */
+/* Styling for the navbar */
 
 #logo {
-    height: 40px;
+    height: 60px;
     width: auto;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+    color: var(--main-background-color);
+}
+
+.navbar .nav-link {
+    color: var(--main-background-color);
+}
+
+.navbar .nav-link.active {
+    color: var(--secondary-color);
+}
+
+/* Styling for landing page */
+
+.index-hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.index-hero h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.index-hero p {
+    color: var(--secondary-color);
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.index-hero .btn-primary {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 10px;
+}
+
+.index-hero .btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-background-color);
+}
+
+/* Index page cards */
+
+.index-howitworks .card {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.index-howitworks .list-group-item {
+    background: none;
+    border: none;
+}
+
+.index-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Styling for home page */
+#weeklySummary .card {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-color);
+}
+
+.weeklyPreview .list-group-item {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+}
+
+#weeklySchedule .day-block.card h4,
+#weeklySchedule .day-block.card p,
+#weeklySchedule .day-block.card span,
+#weeklySchedule .day-block.card div {
+    color: var(--main-background-color);
+}
+
+#weeklySchedule .day-block.card {
+    background-color: var(--primary-color);
+}
+
+
+
+
+
+/* Footer styling */
+footer {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    padding: 1rem 0;
+    text-align: center;
 }
