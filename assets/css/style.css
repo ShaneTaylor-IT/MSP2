@@ -159,8 +159,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--main-background-color);
 }
 
-/* Widget styling */
-
 #weatherWidget {
     background-color: var(--secondary-background-color);
     color: var(--primary-color);
@@ -208,6 +206,101 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2rem 0;
 }
 
+/* ---- Styling for members page ---- */
+
+.members-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.members-section h1,
+.members-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+#profileAvatar {
+    background-color: var(--secondary-color) !important;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#profileName {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.profileRole {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+#editProfileBtn {
+    background-color: var(--secondary-color);
+    color: var(--main-background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+#editProfileBtn:hover {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+}
+
+.members-section .card {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.member-card .card {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+}
+
+.member-card .card:hover {
+    transform: translateY(-3px);
+}
+
+.member-card h5 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.member-card p {
+    margin: 0.25rem 0;
+}
+
+.member-card [data-avatar] {
+    background-color: var(--secondary-color) !important;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.members-section textarea {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.members-section textarea::placeholder {
+    color: var(--main-background-colorcolor);
+    opacity: 0.8;
+}
+
+/* ---- Schedule page styling ---- */
 
 #weeklySchedule .day-block.card h4,
 #weeklySchedule .day-block.card p,
