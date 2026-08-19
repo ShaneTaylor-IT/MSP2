@@ -55,7 +55,7 @@
 
     <!-- Header -->
     <header class="py-5 my-5">
-        <div class="container home-section">
+        <div class="container app-section home-section">
             <div class="row">
                 <h1 class="display-4">Chore Manager</h1>
                 <p class="lead">Organize and manage your household chores with ease.</p>
@@ -65,33 +65,33 @@
 
     <!-- Main content -->
     <main class="d-flex flex-column min-vh-100">
-        <div class="container my-5 home-section">
+        <div class="container app-section home-section">
             <div class="row">
                 <div class="col-md-6">
                     <p class="lead">Week of <em>"Current week"</em></p>
                     <h2>Welcome to the Chore Manager</h2>
                     <p>This is the main content area. Here you can find information about managing chores, adding new
                         tasks, and tracking progress.</p>
-                    <a href="add-chore.html" class="btn btn-primary add-chore-btn">Add chore</a>
+                    <a href="add-chore.html" class="btn btn-primary app-btn add-chore-btn">Add chore</a>
                 </div>
                 <div class="col-md-6 ">
                     <ul class="list-group weeklyPreview">
-                        <li class="list-group-item">Tasks completed today</li>
-                        <li class="list-group-item">% of tasks completed this week</li>
-                        <li class="list-group-item">Tasks overdue</li>
+                        <li class="list-group-item app-tile">Tasks completed today</li>
+                        <li class="list-group-item app-tile">% of tasks completed this week</li>
+                        <li class="list-group-item app-tile">Tasks overdue</li>
                     </ul>
                 </div>
             </div>
         </div>
         <hr class="section-divider">
-        <section id="weeklySummary" class="home-section">
+        <section id="weeklySummary" class="app-section home-section">
             <div class="container my-5">
                 <div class="row gap-3">
                     <div class="col-12">
                         <h2>Weekly Summary</h2>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Mon<br> 21</h5>
                                 <p class="card-text">4/4</p>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Tues<br> 22</h5>
                                 <p class="card-text">7/7</p>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Wed<br> 23</h5>
                                 <p class="card-text">5/5</p>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Thur<br> 24</h5>
                                 <p class="card-text">3/3</p>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Fri<br> 25</h5>
                                 <p class="card-text">2/2</p>
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Sat<br> 26</h5>
                                 <p class="card-text">2/2</p>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="card text-center">
+                        <div class="card app-card text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Sun<br> 27</h5>
                                 <p class="card-text">2/2</p>
@@ -163,33 +163,33 @@
         </section>
 
         <hr class="section-divider">
-        <section id="widgets" class="home-section">
+        <section id="widgets" class="app-section home-section">
             <div class="container my-5">
                 <div class="row">
                     <div class="col-6">
-                        <div class="card p-3" id="weatherWidget">
+                        <div class="card app-card p-3" id="weatherWidget">
                             <h4>Weather</h4>
                             <p class="card-text">Current weather in your area:</p>
 
                             <ul class="list-group">
-                                <li class="list-group-item">Temperature: <span id="weatherTemp">--</span>°C</li>
-                                <li class="list-group-item">Condition: <span id="weatherCondition">--</span></li>
-                                <li class="list-group-item">Ideal for outdoor chores: <span id="weatherIdeal">--</span>
+                                <li class="list-group-item app-tile">Temperature: <span id="weatherTemp">--</span>°C</li>
+                                <li class="list-group-item app-tile">Condition: <span id="weatherCondition">--</span></li>
+                                <li class="list-group-item app-tile">Ideal for outdoor chores: <span id="weatherIdeal">--</span>
                                 </li>
 
                             </ul>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card p-3" id="rewardsWidget">
+                        <div class="card app-card p-3" id="rewardsWidget">
                             <h4>Rewards</h4>
                             <p class="card-text">Your current rewards:</p>
 
                             <ul class="list-group">
-                                <li class="list-group-item">Total points: <span id="rewardPoints">--</span></li>
-                                <li class="list-group-item">Available rewards: <span id="availableRewards">--</span>
+                                <li class="list-group-item app-tile">Total points: <span id="rewardPoints">--</span></li>
+                                <li class="list-group-item app-tile">Available rewards: <span id="availableRewards">--</span>
                                 </li>
-                                <li class="list-group-item">Redeem rewards: <span id="redeemRewards">--</span></li>
+                                <li class="list-group-item app-tile">Redeem rewards: <span id="redeemRewards">--</span></li>
                             </ul>
                         </div>
                     </div>

@@ -13,7 +13,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-        <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
@@ -25,7 +25,8 @@
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png" alt="Chore Manager Logo"></a> <!-- Logo will go here -->
+            <a class="navbar-brand" href="home.html"><img id="logo" src="assets/images/logo.png"
+                    alt="Chore Manager Logo"></a> <!-- Logo will go here -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,7 +55,7 @@
 
     <!-- Main content -->
     <main class="d-flex flex-column min-vh-100">
-        <div class="container my-5">
+        <div class="container app-section my-5">
             <div class="row">
                 <div class="col-12">
                     <h1>Create or edit profile</h1>
@@ -63,19 +64,18 @@
             </div>
         </div>
         <br>
-        <div class="container my-5">
+        <div class="container app-section my-5">
             <div class="row">
                 <div class="col-12">
                     <form>
                         <div class="mb-3">
                             <label class="form-label fw-bold">Your avatar</label>
                             <div class="d-flex gap-2">
-                                <div class="avatar-option bg-primary rounded-circle" data-color="blue">Blue</div>
-                                <div class="avatar-option bg-warning rounded-circle" data-color="yellow">Yellow</div>
-                                <div class="avatar-option bg-success rounded-circle" data-color="green">Green</div>
-                                <div class="avatar-option bg-info rounded-circle" data-color="lightblue">Light Blue
-                                </div>
-                                <div class="avatar-option bg-danger rounded-circle" data-color="red">Red</div>
+                                <div class="avatar-option app-avatar bg-primary rounded-circle" data-color="blue">Blue</div>
+                                <div class="avatar-option app-avatar bg-warning rounded-circle" data-color="yellow">Yellow</div>
+                                <div class="avatar-option app-avatar bg-success rounded-circle" data-color="green">Green</div>
+                                <div class="avatar-option app-avatar bg-info rounded-circle" data-color="lightblue">Cyan</div>
+                                <div class="avatar-option app-avatar bg-danger rounded-circle" data-color="red">Red</div>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -93,8 +93,8 @@
                             <input type="text" class="form-control" id="displayName">
                         </div>
                         <div class="d-flex gap-3 mb-4">
-                            <button class="btn btn-primary w-100 mb-2" type="button">Create new household</button>
-                            <button class="btn btn-secondary w-100" type="button">Add member</button>
+                            <button class="btn app-btn w-100" type="button">Create new household</button>
+                            <button class="btn app-btn w-100" type="button">Add member</button>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Household</label>
@@ -112,8 +112,8 @@
                             </div>
                         </div>
                         <div class="d-flex gap-3 mt-4">
-                            <button type="button" class="btn btn-outline-danger w-50">Cancel</button>
-                            <button type="submit" class="btn btn-success w-50" id="confirmBtn" disabled>Confirm</button>
+                            <button type="button" class="btn app-btn w-50">Cancel</button>
+                            <button type="submit" class="btn app-btn w-50" id="confirmBtn">Confirm</button>
                         </div>
                     </form>
                     <div class="text-center mt-5">
@@ -126,10 +126,11 @@
                         <h2 class="mt-3" id="welcomeName">Welcome, user!</h2>
                         <p>Welcome to Chore Manager. Set up your household to begin organising chores.</p>
 
-                        <button class="btn btn-dark mt-3">Get Started</button>
+                        <button class="btn app-btn mt-3">Get Started</button>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
     <!-- Footer -->

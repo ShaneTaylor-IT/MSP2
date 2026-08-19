@@ -24,11 +24,6 @@ body {
     padding-top: 70px; /* Adjust this value based on the height of your navbar */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
-}
-
 /* ---- Styling for the navbar ---- */
 
 #logo {
@@ -49,7 +44,72 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--secondary-color);
 }
 
-/* ---- Styling for landing page ---- */
+/* ---- GLOBAL COMPONENTS ---- */
+
+/* Universal card style */
+.app-card {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+}
+
+/* Universal button style */
+.app-btn {
+    background-color: var(--secondary-color);
+    color: var(--main-background-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.app-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+}
+
+/* Universal section spacing */
+.app-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Universal section headings */
+.app-section h1,
+.app-section h2,
+.app-section h3,
+.app-section h4,
+.app-section h5,
+.app-section h6 {
+    color: var(--secondary-color);
+}
+
+/* Universal tile/list item */
+.app-tile {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.app-tile:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-background-color);
+}
+
+/* Universal avatar */
+.app-avatar {
+    background-color: var(--secondary-color);
+    color: var(--main-background-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Landing page styling */
 
 .index-hero {
     text-align: center;
@@ -84,11 +144,10 @@ h1, h2, h3, h4, h5, h6 {
 .index-howitworks .card {
     background-color: var(--secondary-background-color);
     color: var(--primary-color);
-    border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .index-howitworks .list-group-item {
@@ -96,31 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 
-.index-section {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-/* ---- Styling for home page ---- */
-
-.home-section {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.home-section h2 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-#weeklySummary .card {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    border: none;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-}
+/* Home page styling */
 
 #weeklySummary .card-title {
     color: var(--secondary-color);
@@ -139,66 +174,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.7;
 }
 
-#weeklySummary .card:hover {
-    transform: translateY(-3px);
-    transition: 0.2s ease;
-}
-
-.weeklyPreview .list-group-item {
-    background-color: var(--primary-color);
-    color: var(--main-background-color);
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-weight: 650;
-}
-
-.weeklyPreview .list-group-item:hover {
-    background-color: var(--secondary-color);
-    color: var(--main-background-color);
-}
-
-#weatherWidget {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#weatherWidget h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-#rewardsWidget {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#rewardsWidget h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-.add-chore-btn {
-    background-color: var(--secondary-color);
-    color: var(--main-background-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.add-chore-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--main-background-color);
-}
-
 .section-divider {
     height: 2px;
     background-color: var(--secondary-color);
@@ -206,18 +181,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2rem 0;
 }
 
-/* ---- Styling for members page ---- */
-
-.members-section {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.members-section h1,
-.members-section h2 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
+/* Members page styling */
 
 #profileAvatar {
     background-color: var(--secondary-color) !important;
@@ -236,47 +200,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-#editProfileBtn {
-    background-color: var(--secondary-color);
-    color: var(--main-background-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 700;
-}
-
-#editProfileBtn:hover {
-    background-color: var(--primary-color);
-    color: var(--main-background-color);
-}
-
-.members-section .card {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-}
-
 .member-card .card {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
     transition: transform 0.2s ease;
 }
-
 .member-card .card:hover {
     transform: translateY(-3px);
-}
-
-.member-card h5 {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-.member-card p {
-    margin: 0.25rem 0;
 }
 
 .member-card [data-avatar] {
@@ -289,33 +217,189 @@ h1, h2, h3, h4, h5, h6 {
 .members-section textarea {
     background-color: var(--primary-color);
     color: var(--main-background-color);
-    border: none;
     border-radius: 10px;
     padding: 1rem;
-    font-size: 1rem;
 }
 
-.members-section textarea::placeholder {
-    color: var(--main-background-colorcolor);
+/* Schedule page styling */
+
+#filterMember,
+#filterCategory {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+}
+
+.form-label {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+#weekRange {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.day-block.card {
+    transition: transform 0.2s ease;
+}
+.day-block.card:hover {
+    transform: translateY(-3px);
+}
+
+.day-block.card h4 {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.day-block.card span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#weeklySummary .card p {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+#weeklySummary .card span {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Profile page styling */
+
+.avatar-option {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--main-background-color);
+    transition: transform 0.2s ease;
+}
+
+.avatar-option:hover {
+    transform: scale(1.1);
+}
+
+.avatar-option.selected {
+    outline: 3px solid var(--secondary-color);
+}
+
+#avatarPreview {
+    border-radius: 50%;
+    font-weight: 700;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add-chore page styling */
+
+.template-btn {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.template-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-background-color);
+    transform: translateY(-2px);
+}
+
+.member-select {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+    border: none;
+    border-radius: 50%;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.member-select:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.member-select.selected {
+    outline: 3px solid var(--secondary-color);
+}
+
+.add-chore-section .form-check-label,
+.add-chore-section label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.day-select {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.day-select:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.day-select.selected {
+    outline: 3px solid var(--secondary-color);
+}
+
+#choreNotes {
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#choreNotes::placeholder {
+    color: var(--main-background-color);
     opacity: 0.8;
 }
 
-/* ---- Schedule page styling ---- */
-
-#weeklySchedule .day-block.card h4,
-#weeklySchedule .day-block.card p,
-#weeklySchedule .day-block.card span,
-#weeklySchedule .day-block.card div {
-    color: var(--main-background-color);
+#chorePreview {
+    background-color: var(--secondary-background-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 1.5rem;
 }
 
-#weeklySchedule .day-block.card {
-    background-color: var(--primary-color);
+/*   Added ready for future JS keep hidden for now as further edits may be needed 
+.chore-completed {
+    border-left: 6px solid var(--completed-color);
 }
 
+.chore-in-progress {
+    border-left: 6px solid var(--in-progress-color);
+}
 
-
-
+.chore-incomplete {
+    border-left: 6px solid var(--incomplete-color);
+}
+*/ 
 
 /* Footer styling */
 footer {
