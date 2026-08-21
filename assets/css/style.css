@@ -127,7 +127,7 @@ body {
     margin: 0 auto 2rem auto;
 }
 
-.index-hero .btn-primary {
+.index-hero .btn {
     background-color: var(--secondary-background-color);
     color: var(--primary-color);
     border: none;
@@ -136,7 +136,7 @@ body {
     border-radius: 10px;
 }
 
-.index-hero .btn-primary:hover {
+.index-hero .btn:hover {
     background-color: var(--secondary-color);
     color: var(--main-background-color);
 }

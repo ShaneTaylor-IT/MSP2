@@ -19,6 +19,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -55,7 +57,7 @@
 
     <!-- Main content -->
     <main class="d-flex flex-column min-vh-100">
-        <div class="container app-section my-5">
+        <div class="container app-section">
             <div class="row">
                 <div class="col-12">
                     <h1>Create or edit profile</h1>
@@ -63,8 +65,7 @@
                 </div>
             </div>
         </div>
-        <br>
-        <div class="container app-section my-5">
+        <div class="container app-section">
             <div class="row">
                 <div class="col-12">
                     <form>
@@ -112,7 +113,7 @@
                             </div>
                         </div>
                         <div class="d-flex gap-3 mt-4">
-                            <button type="button" class="btn app-btn w-50">Cancel</button>
+                            <button type="button" class="btn app-btn w-50" id="cancelBtn">Cancel</button>
                             <button type="submit" class="btn app-btn w-50" id="confirmBtn">Confirm</button>
                         </div>
                     </form>
