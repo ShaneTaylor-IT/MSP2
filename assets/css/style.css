@@ -294,6 +294,11 @@ body {
 }
 
 #avatarPreview {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color: var(--main-background-color);
     border-radius: 50%;
     font-weight: 700;
     display: inline-flex;

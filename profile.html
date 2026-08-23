@@ -19,7 +19,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -72,11 +73,16 @@
                         <div class="mb-3">
                             <label class="form-label fw-bold">Your avatar</label>
                             <div class="d-flex gap-2">
-                                <div class="avatar-option app-avatar bg-primary rounded-circle" data-color="blue">Blue</div>
-                                <div class="avatar-option app-avatar bg-warning rounded-circle" data-color="yellow">Yellow</div>
-                                <div class="avatar-option app-avatar bg-success rounded-circle" data-color="green">Green</div>
-                                <div class="avatar-option app-avatar bg-info rounded-circle" data-color="lightblue">Cyan</div>
-                                <div class="avatar-option app-avatar bg-danger rounded-circle" data-color="red">Red</div>
+                                <div class="avatar-option app-avatar bg-primary" data-color="blue">Blue
+                                </div>
+                                <div class="avatar-option app-avatar bg-warning" data-color="yellow">
+                                    Yellow</div>
+                                <div class="avatar-option app-avatar bg-success" data-color="green">Green
+                                </div>
+                                <div class="avatar-option app-avatar bg-info" data-color="cyan">Cyan
+                                </div>
+                                <div class="avatar-option app-avatar bg-danger" data-color="red">Red
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -93,10 +99,6 @@
                             <label class="form-label">Display Name</label>
                             <input type="text" class="form-control" id="displayName">
                         </div>
-                        <div class="d-flex gap-3 mb-4">
-                            <button class="btn app-btn w-100" type="button">Create new household</button>
-                            <button class="btn app-btn w-100" type="button">Add member</button>
-                        </div>
                         <div class="mb-3">
                             <label class="form-label">Household</label>
                             <input type="text" class="form-control" id="householdName">
@@ -112,6 +114,10 @@
                                 <label class="form-check-label" for="guestRole">Household Guest</label>
                             </div>
                         </div>
+                        <div class="d-flex gap-3 mb-4">
+                            <button class="btn app-btn w-100" type="button" id="createHouseholdBtn">Create new household</button>
+                            <button class="btn app-btn w-100" type="button" id="addMemberBtn">Add member</button>
+                        </div>
                         <div class="d-flex gap-3 mt-4">
                             <button type="button" class="btn app-btn w-50" id="cancelBtn">Cancel</button>
                             <button type="submit" class="btn app-btn w-50" id="confirmBtn">Confirm</button>
@@ -119,8 +125,7 @@
                     </form>
                     <div class="text-center mt-5">
                         <div id="avatarPreview"
-                            class="rounded-circle d-inline-flex justify-content-center align-items-center"
-                            style="width: 80px; height: 80px; font-size: 2rem; background-color: #e0e0e0; color: #fff;">
+                            class="d-inline-flex justify-content-center align-items-center">
                             ?
                         </div>
 
