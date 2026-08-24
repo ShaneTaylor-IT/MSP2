@@ -14,6 +14,11 @@
     --rewards-color: #9B8AFB;
     --main-background-color: #302A25;
     --secondary-background-color: #6b705c;
+    --profile-color-red: red;
+    --profile-color-blue: blue;
+    --profile-color-yellow: yellow;
+    --profile-color-cyan: cyan;
+    --profile-color-green: green;
 }
 
 /* Adding font styles to the body and headings */
@@ -183,19 +188,19 @@ body {
 
 /* Members page styling */
 
-#profileAvatar {
+#adminAvatar {
     background-color: var(--secondary-color) !important;
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
 
-#profileName {
+#adminName {
     color: var(--primary-color);
     font-weight: 700;
 }
 
-.profileRole {
+#adminRole {
     color: var(--secondary-color);
     font-weight: 600;
 }

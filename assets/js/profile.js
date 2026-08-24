@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    const colorMap = {
+        red: "var(--profile-color-red)",
+        blue: "var(--profile-color-blue)",
+        yellow: "var(--profile-color-yellow)",
+        cyan: "var(--profile-color-cyan)",
+        green: "var(--profile-color-green)"
+    };
+
     let selectedAvatarColor = null;
 
     let saved = localStorage.getItem("userProfile");
@@ -65,7 +73,7 @@ $(document).ready(function () {
 
         selectedAvatarColor = $(this).data("color");
 
-        $("#avatarPreview").css("background-color", $(this).css("background-color"));
+        $("#avatarPreview").css("background-color", colorMap[selectedAvatarColor]);
 
         updateAvatarPreview();
     });

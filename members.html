@@ -19,7 +19,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -70,7 +71,7 @@
                             </div>
                             <div>
                                 <h2 id="adminName">John Doe</h2>
-                                <p class="adminRole">Household Member</p>
+                                <p id="adminRole">Household Member</p>
                                 <div>
                                     <p class="mb-0">Tasks completed:
                                         <span id="tasksCompleted">0</span>
@@ -86,8 +87,10 @@
                     </div>
                 </section>
                 <section class="mb-5 members-section app-section">
-                    <h2>Household Members</h2>
-                    <button class="btn app-btn" id="addMemberBtn">Add Member</button>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2>Household Members</h2>
+                        <button class="btn app-btn" id="addMemberBtn">Add Member</button>
+                    </div>
                     <div class="row mt-4" id="membersContainer">
                         <div class="col-md-4 mb-3 member-card">
                             <div class="card p-3 app-card text-center">
@@ -103,9 +106,6 @@
                                 </p>
                             </div>
                         </div>
-
-                        <!-- More member cards will be duplicated here by JS -->
-
                     </div>
                 </section>
                 <section class="mb-5 members-section app-section">
@@ -119,6 +119,45 @@
             </div>
         </div>
     </main>
+
+    <div class="modal fade" id="addMemberModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content app-card p-3">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Member</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <label class="form-label">Member Name</label>
+                    <input type="text" id="newMemberName" class="form-control">
+
+                    <label class="form-label mt-3">Role</label>
+                    <select id="newMemberRole" class="form-control">
+                        <option>Household Member</option>
+                        <option>Child</option>
+                        <option>Guest</option>
+                    </select>
+
+                    <label class="form-label mt-3">Avatar Colour</label>
+                    <div class="d-flex gap-3 mt-2" id="memberColorOptions">
+                        <div class="avatar-option bg-primary rounded-circle" data-color="blue"></div>
+                        <div class="avatar-option bg-warning rounded-circle" data-color="yellow"></div>
+                        <div class="avatar-option bg-success rounded-circle" data-color="green"></div>
+                        <div class="avatar-option bg-info rounded-circle" data-color="lightblue"></div>
+                        <div class="avatar-option bg-danger rounded-circle" data-color="red"></div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn app-btn" id="saveMemberBtn">Save Member</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="mt-auto">
