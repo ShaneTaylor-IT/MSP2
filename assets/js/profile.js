@@ -100,10 +100,6 @@ $(document).ready(function () {
         alert("This feature will be available in future update.");
     });
 
-    $("#addMemberBtn").on("click", function () {
-        alert("This feature will be available in future update.");
-    });
-
     $("#confirmBtn").on("click", function (e) {
         e.preventDefault();
 
