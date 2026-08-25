@@ -8,7 +8,6 @@ $(document).ready(function () {
         green: "var(--profile-color-green)"
     };
 
-
     function loadAdminProfile() {
         const admin = JSON.parse(localStorage.getItem("userProfile"));
         if (!admin) return;
@@ -22,31 +21,6 @@ $(document).ready(function () {
     }
 
     loadAdminProfile();
-
-    // These placeholders are for tests later for when the schedule page JS is being built and tested
-    const placeholderMembers = [
-        {
-            id: 1,
-            displayName: "Sarah",
-            role: "Household Member",
-            avatarColor: "red",
-            initials: "S",
-        },
-        {
-            id: 2,
-            displayName: "Ben",
-            role: "Household Member",
-            avatarColor: "blue",
-            initials: "B",
-        },
-        {
-            id: 3,
-            displayName: "Emily",
-            role: "Child",
-            avatarColor: "green",
-            initials: "E",
-        },
-    ];
 
     let members =
         JSON.parse(localStorage.getItem("members")) || placeholderMembers;
@@ -66,6 +40,9 @@ $(document).ready(function () {
                         <p class="profileRole">${member.role}</p>
                         <p class="mb-0">Chores completed for the day: 0</p>
                         <p class="mb-2">Day streak: 0</p>
+
+                        <button class="btn btn-warning btn-sm edit-member-btn data-id="${member.id}>
+                            Edit Member 
 
                         <button class="btn btn-danger btn-sm remove-member-btn" data-id="${member.id}">
                              Remove Member
@@ -136,6 +113,15 @@ $(document).ready(function () {
         localStorage.setItem("members", JSON.stringify(members));
 
         renderMembers();
+    });
+
+    $("#householdComments").val(localStorage.getItem("householdComments") || "");
+    $("#householdSuggestions").val(localStorage.getItem("householdSuggestions") || "");
+    $("#householdComments").on("input", function () {
+        localStorage.setItem("householdComments", $(this).val());
+    });
+    $("#householdSuggestions").on("input", function () {
+        localStorage.setItem("householdSuggestions", $(this).val());
     });
 });
 
