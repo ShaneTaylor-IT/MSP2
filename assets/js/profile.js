@@ -26,7 +26,7 @@ $(document).ready(function () {
         let initials = profile.initials || getInitials(profile.firstName, profile.lastName);
 
         $("#avatarPreview")
-            .css("background-color", "var(--primary-color)")
+            .css("background-color", colorMap[selectedAvatarColor])
             .text(initials);
 
         updateWelcomeName();

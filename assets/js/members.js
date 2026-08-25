@@ -29,21 +29,21 @@ $(document).ready(function () {
             id: 1,
             displayName: "Sarah",
             role: "Household Member",
-            avatarColor: "var(--profile-color-red)",
+            avatarColor: "red",
             initials: "S",
         },
         {
             id: 2,
             displayName: "Ben",
             role: "Household Member",
-            avatarColor: "var(--profile-color-blue)",
+            avatarColor: "blue",
             initials: "B",
         },
         {
             id: 3,
             displayName: "Emily",
             role: "Child",
-            avatarColor: "var(--profile-color-green)",
+            avatarColor: "green",
             initials: "E",
         },
     ];
@@ -58,11 +58,11 @@ $(document).ready(function () {
             const card = `
                 <div class="col-md-4 mb-3 member-card">
                     <div class="card p-3 app-card text-center">
-                        <div class="rounded-circle mx-auto mb-3 app-avatar"
+                        <div class="rounded-circle mx-auto mb-3 app-avatar member-avatar"
                              style="background-color: ${colorMap[member.avatarColor]};">
                              ${member.initials}
                         </div>
-                        <h5 class="mb-1">${member.displayName}</h5>
+                        <h5 class="my-1">${member.displayName}</h5>
                         <p class="profileRole">${member.role}</p>
                         <p class="mb-0">Chores completed for the day: 0</p>
                         <p class="mb-2">Day streak: 0</p>
