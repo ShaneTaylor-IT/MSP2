@@ -56,6 +56,11 @@ $(document).ready(function () {
 
     renderMembers();
 
+    // Disabled feature. To be updated in future updates
+    $(".edit-member-btn").on("click", function () {
+        alert("This feature will be available in future update.");
+    });
+
     $("#addMemberBtn").on("click", function () {
         const modal = new bootstrap.Modal(
             document.getElementById("addMemberModal"),
