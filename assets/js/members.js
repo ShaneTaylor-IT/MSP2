@@ -23,7 +23,7 @@ $(document).ready(function () {
     loadAdminProfile();
 
     let members =
-        JSON.parse(localStorage.getItem("members")) || placeholderMembers;
+        JSON.parse(localStorage.getItem("members")) || [];
 
     function renderMembers() {
         $("#membersContainer").empty();
