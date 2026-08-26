@@ -91,14 +91,10 @@
                         <div class="mb-3">
                             <label class="form-label">Assign To</label>
                             <div class="d-flex gap-2" id="assignTo">
-                                <!-- Example member bubbles -->
-                                <button type="button" class="member-select rounded-circle" data-member="ST">ST</button>
-                                <button type="button" class="member-select rounded-circle" data-member="JB">JB</button>
-                                <button type="button" class="member-select rounded-circle" data-member="BS">BS</button>
                             </div>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3" id="prioritySection">
                             <label class="form-label">Priority</label>
                             <div class="d-flex gap-3">
                                 <label><input type="radio" name="priority" value="low"> Low</label>
@@ -107,7 +103,7 @@
                             </div>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3" id="recurrenceSection">
                             <label class="form-label">Recurrence</label>
                             <div class="d-flex flex-wrap gap-3">
                                 <label><input type="radio" name="recurrence" value="once"> Once</label>
