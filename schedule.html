@@ -20,7 +20,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -65,7 +66,6 @@
                     <p>Here you can view the weekly schedule for your household chores.</p>
                 </section>
 
-                <!-- Filters -->
                 <section class="app-section">
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -84,50 +84,51 @@
                 </section>
 
                 <section class="text-center">
+                    <h4 class="mb-0">Chores this week</h4>
                     <h4 class="mb-0" id="weekRange">July 21-27</h4>
-                </section>
-
-                <section class="app-section">
-                    <button class="btn app-btn w-100">+ Add Chore</button>
                 </section>
 
                 <section id="weeklySchedule" class="app-section">
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Monday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="monday"></div>
+                        <h4 class="mb-2 text-center">Monday <span id="count-monday">0/0</span></h4>
+                        <div class="mt-3" id="day-monday"></div>
                     </div>
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Tuesday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="tuesday"></div>
+                        <h4 class="mb-2 text-center">Tuesday <span id="count-tuesday">0/0</span></h4>
+                        <div class="mt-3" id="day-tuesday"></div>
                     </div>
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Wednesday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="wednesday"></div>
+                        <h4 class="mb-2 text-center">Wednesday <span id="count-wednesday">0/0</span></h4>
+                        <div class="mt-3" id="day-wednesday"></div>
                     </div>
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Thursday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="thursday"></div>
+                        <h4 class="mb-2 text-center">Thursday <span id="count-thursday">0/0</span></h4>
+                        <div class="mt-3" id="day-thursday"></div>
                     </div>
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Friday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="friday"></div>
+                        <h4 class="mb-2 text-center">Friday <span id="count-friday">0/0</span></h4>
+                        <div class="mt-3" id="day-friday"></div>
                     </div>
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Saturday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="saturday"></div>
+                        <h4 class="mb-2 text-center">Saturday <span id="count-saturday">0/0</span></h4>
+                        <div class="mt-3" id="day-saturday"></div>
                     </div>
 
                     <div class="day-block card app-card mb-4 p-3">
-                        <h4 class="mb-2 text-center">Sunday <span>(0/0)</span></h4>
-                        <div class="mt-3" data-day="sunday"></div>
+                        <h4 class="mb-2 text-center">Sunday <span id="count-sunday">0/0</span></h4>
+                        <div class="mt-3" id="day-sunday"></div>
                     </div>
 
+                </section>
+
+                <section class="app-section">
+                    <a href="add-chore.html" class="app-btn btn w-100">Add chore</a>
                 </section>
 
                 <section class="app-section" id="weeklySummary">
@@ -155,7 +156,6 @@
             </div>
         </div>
     </main>
-
 
     <!-- Footer -->
     <footer class="mt-auto">

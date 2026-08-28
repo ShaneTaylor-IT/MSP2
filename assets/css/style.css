@@ -49,8 +49,6 @@ body {
     color: var(--secondary-color);
 }
 
-/* ---- GLOBAL COMPONENTS ---- */
-
 /* Universal card style */
 .app-card {
     background-color: var(--secondary-background-color);
@@ -115,7 +113,6 @@ body {
 }
 
 /* Landing page styling */
-
 .index-hero {
     text-align: center;
     padding: 4rem 1rem;
@@ -161,7 +158,6 @@ body {
 }
 
 /* Home page styling */
-
 #weeklySummary .card-title {
     color: var(--secondary-color);
     font-size: 1.4rem;
@@ -187,7 +183,6 @@ body {
 }
 
 /* Members page styling */
-
 #adminAvatar {
     width: 100px;
     height: 100px;
@@ -235,7 +230,6 @@ body {
 }
 
 /* Schedule page styling */
-
 #filterMember,
 #filterCategory {
     background-color: var(--primary-color);
@@ -283,8 +277,22 @@ body {
     font-weight: 700;
 }
 
-/* Profile page styling */
+.chore-card {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
 
+.chore-card.small {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.chore-completed h5 {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Profile page styling */
 .avatar-option {
     width: 60px;
     height: 60px;
@@ -320,7 +328,6 @@ body {
 }
 
 /* Add-chore page styling */
-
 .template-btn {
     background-color: var(--secondary-background-color);
     color: var(--primary-color);
@@ -404,20 +411,6 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     padding: 1.5rem;
 }
-
-/*   Added ready for future JS keep hidden for now as further edits may be needed 
-.chore-completed {
-    border-left: 6px solid var(--completed-color);
-}
-
-.chore-in-progress {
-    border-left: 6px solid var(--in-progress-color);
-}
-
-.chore-incomplete {
-    border-left: 6px solid var(--incomplete-color);
-}
-*/ 
 
 /* Footer styling */
 footer {
