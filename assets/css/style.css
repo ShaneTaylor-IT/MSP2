@@ -58,6 +58,13 @@ body {
     padding: 1.5rem;
 }
 
+.app-card .card {
+    transition: transform 0.2s ease;
+}
+.app-card .card:hover {
+    transform: translateY(-3px);
+}
+
 /* Universal button style */
 .app-btn {
     background-color: var(--secondary-color);
@@ -115,7 +122,7 @@ body {
 /* Landing page styling */
 .index-hero {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .index-hero h1 {
@@ -143,43 +150,22 @@ body {
     color: var(--main-background-color);
 }
 
-.index-howitworks .card {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.index-howitworks .list-group-item {
-    background: none;
-    border: none;
-}
-
 /* Home page styling */
-#weeklySummary .card-title {
-    color: var(--secondary-color);
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-#weeklySummary .card-text {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-#weeklySummary .card-text:last-of-type {
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-
 .section-divider {
     height: 2px;
     background-color: var(--secondary-color);
     opacity: 0.3;
     margin: 2rem 0;
+}
+
+/* To fix uneven home cards due to content inside the cards */
+#weeklySummary .day-block.app-card {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 75% !important;
+    min-height: 75% !important;
 }
 
 /* Members page styling */
@@ -201,14 +187,9 @@ body {
     font-weight: 600;
 }
 
-.member-card .card {
-    transition: transform 0.2s ease;
-}
-.member-card .card:hover {
-    transform: translateY(-3px);
-}
 
-.member-card [data-avatar] {
+
+.app-card [data-avatar] {
     background-color: var(--secondary-color) !important;
     width: 70px;
     height: 70px;

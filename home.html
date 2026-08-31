@@ -19,7 +19,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -56,7 +57,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="py-5 my-5">
+    <header>
         <div class="container app-section home-section">
             <div class="row">
                 <h1 class="display-4">Chore Manager</h1>
@@ -70,7 +71,7 @@
         <div class="container app-section home-section">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="lead">Week of <em>"Current week"</em></p>
+                    <p class="lead"><strong>Week of <em id="homeWeekRange">--</em></strong></p>
                     <h2>Welcome to the Chore Manager</h2>
                     <p>This is the main content area. Here you can find information about managing chores, adding new
                         tasks, and tracking progress.</p>
@@ -78,122 +79,131 @@
                 </div>
                 <div class="col-md-6 ">
                     <ul class="list-group weeklyPreview">
-                        <li class="list-group-item app-tile">Tasks completed today</li>
-                        <li class="list-group-item app-tile">% of tasks completed this week</li>
-                        <li class="list-group-item app-tile">Tasks overdue</li>
+                        <li id="home-completed-today" class="list-group-item app-tile">Tasks completed today</li>
+                        <li id="home-weekly-percent" class="list-group-item app-tile">% of tasks completed this week
+                        </li>
+                        <li id="home-overdue" class="list-group-item app-tile">Tasks overdue</li>
                     </ul>
+
                 </div>
             </div>
         </div>
         <hr class="section-divider">
         <section id="weeklySummary" class="app-section home-section">
-            <div class="container my-5">
-                <div class="row gap-3">
+            <div class="container">
+                <div class="row align-items-stretch">
                     <div class="col-12">
                         <h2>Weekly Summary</h2>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Mon<br> 21</h5>
-                                <p class="card-text">4/4</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Monday<br><span id="home-count-monday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Tues<br> 22</h5>
-                                <p class="card-text">7/7</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Tuesday<br><span id="home-count-tuesday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Wed<br> 23</h5>
-                                <p class="card-text">5/5</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Wednesday<br><span id="home-count-wednesday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Thur<br> 24</h5>
-                                <p class="card-text">3/3</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Thursday<br><span id="home-count-thursday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Fri<br> 25</h5>
-                                <p class="card-text">2/2</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Friday<br><span id="home-count-friday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Sat<br> 26</h5>
-                                <p class="card-text">2/2</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Saturday<br><span id="home-count-saturday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card app-card text-center">
+                    <div class="col-md d-flex">
+                        <div class="card day-block app-card text-center p-3 my-3">
                             <div class="card-body">
-                                <h5 class="card-title">Sun<br> 27</h5>
-                                <p class="card-text">2/2</p>
-                                <P class="card-text">Progress bar will go here</p>
+                                <h5 class="card-title">Sunday<br><span id="home-count-sunday">0/0</span></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <h3>Legend</h3>
-                        <p>Green = Completed, Yellow = In Progress, Red = Incomplete</p>
-                        <!-- This will show coloured bar for visual reference -->
-                    </div>
+
                 </div>
             </div>
         </section>
 
         <hr class="section-divider">
         <section id="widgets" class="app-section home-section">
-            <div class="container my-5">
+            <div class="container">
                 <div class="row">
                     <div class="col-6">
                         <div class="card app-card p-3" id="weatherWidget">
                             <h4>Weather</h4>
-                            <p class="card-text">Current weather in your area:</p>
+                            <p class="card-text">Today's weather:</p>
 
-                            <ul class="list-group">
-                                <li class="list-group-item app-tile">Temperature: <span id="weatherTemp">--</span>°C</li>
-                                <li class="list-group-item app-tile">Condition: <span id="weatherCondition">--</span></li>
-                                <li class="list-group-item app-tile">Ideal for outdoor chores: <span id="weatherIdeal">--</span>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item app-tile">
+                                    <strong>Temperature:</strong> <span id="weatherTemp">--</span>°C
                                 </li>
-
+                                <li class="list-group-item app-tile">
+                                    <strong>Feels like:</strong> <span id="weatherFeels">--</span>°C
+                                </li>
+                                <li class="list-group-item app-tile">
+                                    <strong>Condition:</strong> <span id="weatherCondition">--</span>
+                                </li>
+                                <li class="list-group-item app-tile">
+                                    <strong>Ideal for outdoor chores:</strong> <span id="weatherIdeal">--</span>
+                                </li>
                             </ul>
+
+
+                            <a href="404.html" class="btn btn-primary app-btn" id="weeklyWeatherBtn">
+                                See weekly schedule and forcast
+                            </a>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card app-card p-3" id="rewardsWidget">
                             <h4>Rewards</h4>
-                            <p class="card-text">Your current rewards:</p>
+                            <p class="card-text">Admin reward summary:</p>
 
-                            <ul class="list-group">
-                                <li class="list-group-item app-tile">Total points: <span id="rewardPoints">--</span></li>
-                                <li class="list-group-item app-tile">Available rewards: <span id="availableRewards">--</span>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item app-tile">
+                                    <strong>Name:</strong> <span id="rewardAdminName">Admin User</span>
                                 </li>
-                                <li class="list-group-item app-tile">Redeem rewards: <span id="redeemRewards">--</span></li>
+                                <li class="list-group-item app-tile">
+                                    <strong>Total Points:</strong> <span id="rewardPoints">120</span>
+                                </li>
+                                <li class="list-group-item app-tile">
+                                    <strong>Available Rewards:</strong> <span id="availableRewards">3</span>
+                                </li>
+                                <li class="list-group-item app-tile">
+                                    <strong>Last Redeemed:</strong> <span id="lastRedeemed">None</span>
+                                </li>
                             </ul>
+
+                            <a href="404.html" class="btn btn-primary app-btn" id="redeemRewardsBtn">
+                                Redeem Rewards
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -217,7 +227,7 @@
     <script src="https://kit.fontawesome.com/57eeae5219.js" crossorigin="anonymous"></script>
 
     <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>

@@ -30,7 +30,7 @@ $(document).ready(function () {
 
         members.forEach((member) => {
             const card = `
-                <div class="col-md-4 mb-3 member-card">
+                <div class="col-md-4 mb-3">
                     <div class="card p-3 app-card text-center">
                         <div class="rounded-circle mx-auto mb-3 app-avatar member-avatar"
                              style="background-color: ${colorMap[member.avatarColor]};">
@@ -129,5 +129,3 @@ $(document).ready(function () {
         localStorage.setItem("householdSuggestions", $(this).val());
     });
 });
-
-
