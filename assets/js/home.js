@@ -136,17 +136,12 @@ function loadAdminRewards() {
     }
 
     const rewardAdminName = document.getElementById("rewardAdminName");
-    const rewardAdminRole = document.getElementById("rewardAdminRole");
     const rewardPoints = document.getElementById("rewardPoints");
     const availableRewards = document.getElementById("availableRewards");
     const lastRedeemed = document.getElementById("lastRedeemed");
 
     if (rewardAdminName !== null) {
         rewardAdminName.textContent = admin.displayName;
-    }
-
-    if (rewardAdminRole !== null) {
-        rewardAdminRole.textContent = admin.role;
     }
 
     if (rewardPoints !== null) {

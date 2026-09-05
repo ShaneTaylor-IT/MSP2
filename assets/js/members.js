@@ -41,8 +41,9 @@ $(document).ready(function () {
                         <p class="mb-0">Chores completed for the day: 0</p>
                         <p class="mb-2">Day streak: 0</p>
 
-                        <button class="btn btn-warning btn-sm edit-member-btn data-id="${member.id}>
-                            Edit Member 
+                        <button class="btn btn-warning btn-sm edit-member-btn" data-id="${member.id}">
+                            Edit Member
+                        </button> 
 
                         <button class="btn btn-danger btn-sm remove-member-btn" data-id="${member.id}">
                              Remove Member
@@ -57,9 +58,10 @@ $(document).ready(function () {
     renderMembers();
 
     // Disabled feature. To be updated in future updates
-    $(".edit-member-btn").on("click", function () {
+    $(document).on("click", ".edit-member-btn", function () {
         alert("This feature will be available in future update.");
     });
+
 
     $("#addMemberBtn").on("click", function () {
         const modal = new bootstrap.Modal(

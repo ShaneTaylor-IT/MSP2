@@ -111,7 +111,7 @@ $(document).ready(function () {
     $("#confirmBtn").on("click", function (e) {
         e.preventDefault();
 
-        let role = $("input[name='role']:checked").val() || "guest";
+        let role = $("input[name='role']:checked").val() || "admin";
 
         let profile = {
             avatarColor: selectedAvatarColor,
