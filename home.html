@@ -61,7 +61,8 @@
         <div class="container app-section home-section">
             <div class="row">
                 <h1 class="display-4">Chore Manager</h1>
-                <p class="lead">Organize and manage your household chores with ease.</p>
+                <p class="lead">Organise and manage your household chores with ease.</p>
+                <p class="lead">Track progress, assign tasks, and stay motivated!</p>
             </div>
         </div>
     </header>
@@ -75,7 +76,8 @@
                     <h2>Welcome to the Chore Manager</h2>
                     <p>This is the main content area. Here you can find information about managing chores, adding new
                         tasks, and tracking progress.</p>
-                    <a href="add-chore.html" class="btn btn-primary app-btn add-chore-btn">Add chore</a>
+                    <span><a href="add-chore.html" class="btn btn-primary app-btn add-chore-btn"><i class="fa-solid fa-clipboard-list"> </i>Add chore</a></span>                    
+                    <span><a href="members.html" class="btn btn-primary app-btn members-btn"><i class="fa-solid fa-circle-user"></i> View members</a></span>
                 </div>
                 <div class="col-md-6 ">
                     <ul class="list-group weeklyPreview">
@@ -144,6 +146,7 @@
                             </div>
                         </div>
                     </div>
+                    <a href="schedule.html" class="btn btn-primary app-btn schedule-btn"><i class="fa-solid fa-list-check"></i> See Schedule</a>
 
                 </div>
             </div>
@@ -156,46 +159,46 @@
                     <div class="col-6">
                         <div class="card app-card p-3" id="weatherWidget">
                             <h4>Weather</h4>
-                            <p class="card-text">Today's weather:</p>
+                            <p class="card-text"><i class="fa-solid fa-cloud-sun-rain"></i> Today's weather forcast:</p>
 
                             <ul class="list-group mb-3">
                                 <li class="list-group-item app-tile">
-                                    <strong>Temperature:</strong> <span id="weatherTemp">--</span>°C
+                                    <strong><i class="fa-solid fa-temperature-half"></i> Temperature:</strong> <span id="weatherTemp">--</span>°C
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong>Feels like:</strong> <span id="weatherFeels">--</span>°C
+                                    <strong><i class="fa-solid fa-temperature-half"></i> Feels like:</strong> <span id="weatherFeels">--</span>°C
                                 </li>
                                 <li class="list-group-item app-tile">
                                     <strong>Condition:</strong> <span id="weatherCondition">--</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong>Ideal for outdoor chores:</strong> <span id="weatherIdeal">--</span>
+                                    <strong><i class="fa-solid fa-shoe-prints"></i> Ideal for outdoor chores:</strong> <span id="weatherIdeal">--</span>
                                 </li>
                             </ul>
 
 
                             <a href="404.html" class="btn btn-primary app-btn" id="weeklyWeatherBtn">
-                                See weekly schedule and forcast
+                                See weekly forcast
                             </a>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card app-card p-3" id="rewardsWidget">
                             <h4>Rewards</h4>
-                            <p class="card-text">Admin reward summary:</p>
+                            <p class="card-text"><i class="fa-solid fa-gift"></i> Admin reward summary:</p>
 
                             <ul class="list-group mb-3">
                                 <li class="list-group-item app-tile">
                                     <strong>Name:</strong> <span id="rewardAdminName">Admin User</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong>Total Points:</strong> <span id="rewardPoints">120</span>
+                                    <strong><i class="fa-solid fa-coins"></i> Total Points:</strong> <span id="rewardPoints">120</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong>Available Rewards:</strong> <span id="availableRewards">3</span>
+                                    <strong><i class="fa-solid fa-gifts"></i> Available Rewards:</strong> <span id="availableRewards">3</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong>Last Redeemed:</strong> <span id="lastRedeemed">None</span>
+                                    <strong><i class="fa-solid fa-clock-rotate-left"></i> Last Rewards Redeemed:</strong> <span id="lastRedeemed">None</span>
                                 </li>
                             </ul>
 

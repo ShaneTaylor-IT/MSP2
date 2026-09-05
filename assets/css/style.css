@@ -58,13 +58,6 @@ body {
     padding: 1.5rem;
 }
 
-.app-card .card {
-    transition: transform 0.2s ease;
-}
-.app-card .card:hover {
-    transform: translateY(-3px);
-}
-
 /* Universal button style */
 .app-btn {
     background-color: var(--secondary-color);
@@ -136,20 +129,6 @@ body {
     margin: 0 auto 2rem auto;
 }
 
-.index-hero .btn {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-color);
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1.25rem;
-    border-radius: 10px;
-}
-
-.index-hero .btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--main-background-color);
-}
-
 /* Home page styling */
 .section-divider {
     height: 2px;
@@ -187,9 +166,14 @@ body {
     font-weight: 600;
 }
 
+.member-card .card {
+    transition: transform 0.2s ease;
+}
+.member-card .card:hover {
+    transform: translateY(-3px);
+}
 
-
-.app-card [data-avatar] {
+.member-card [data-avatar] {
     background-color: var(--secondary-color) !important;
     width: 70px;
     height: 70px;
