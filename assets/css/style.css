@@ -387,7 +387,7 @@ footer {
 
 @media (max-width: 576px) {
     #widgets .app-card {
-        height: 600px;
+        height: 650px;
     }
 
     #widgets .app-card .app-btn {
