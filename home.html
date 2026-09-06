@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chore Manager is a web application that helps you manage household chores, track progress, and earn rewards.">
+    <meta name="description"
+        content="Chore Manager is a web application that helps you manage household chores, track progress, and earn rewards.">
     <title>Chore Manager | Home</title>
 
     <!-- Bootstrap CSS -->
@@ -77,8 +78,7 @@
                     <h2>Welcome to the Chore Manager</h2>
                     <p>This is the main content area. Here you can find information about managing chores, adding new
                         tasks, and tracking progress.</p>
-                    <span><a href="add-chore.html" class="btn btn-primary app-btn add-chore-btn"><i class="fa-solid fa-clipboard-list"> </i>Add chore</a></span>                    
-                    <span><a href="members.html" class="btn btn-primary app-btn members-btn"><i class="fa-solid fa-circle-user"></i> View members</a></span>
+
                 </div>
                 <div class="col-md-6 ">
                     <ul class="list-group weeklyPreview">
@@ -87,6 +87,19 @@
                         </li>
                         <li id="home-overdue" class="list-group-item app-tile">Tasks overdue</li>
                     </ul>
+                </div>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="schedule.html" class="btn app-btn schedule-btn w-100 my-1"><i
+                                    class="fa-solid fa-list-check"></i> View Schedule</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="add-chore.html" class="btn app-btn add-chore-btn w-100 my-1"><i
+                                    class="fa-solid fa-plus"></i> Add Chore</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -146,7 +159,10 @@
                             </div>
                         </div>
                     </div>
-                    <a href="schedule.html" class="btn btn-primary app-btn schedule-btn"><i class="fa-solid fa-list-check"></i> See Schedule</a>
+                    <div class="col-12 text-center mt-3">
+                        <a href="schedule.html" class="btn app-btn schedule-btn w-100"><i
+                                class="fa-solid fa-list-check"></i> View Full Schedule</a>
+                    
 
                 </div>
             </div>
@@ -164,21 +180,24 @@
 
                             <ul class="list-group mb-3">
                                 <li class="list-group-item app-tile">
-                                    <strong><i class="fa-solid fa-temperature-half"></i> Temperature:</strong> <span id="weatherTemp">--</span>°C
+                                    <strong><i class="fa-solid fa-temperature-half"></i> Temperature:</strong> <span
+                                        id="weatherTemp">--</span>°C
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong><i class="fa-solid fa-temperature-half"></i> Feels like:</strong> <span id="weatherFeels">--</span>°C
+                                    <strong><i class="fa-solid fa-temperature-half"></i> Feels like:</strong> <span
+                                        id="weatherFeels">--</span>°C
                                 </li>
                                 <li class="list-group-item app-tile">
                                     <strong>Condition:</strong> <span id="weatherCondition">--</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong><i class="fa-solid fa-shoe-prints"></i> Ideal for outdoor chores:</strong> <span id="weatherIdeal">--</span>
+                                    <strong><i class="fa-solid fa-shoe-prints"></i> Ideal for outdoor chores:</strong>
+                                    <span id="weatherIdeal">--</span>
                                 </li>
                             </ul>
 
 
-                            <a href="404.html" class="btn btn-primary app-btn" id="weeklyWeatherBtn">
+                            <a href="404.html" class="btn  app-btn" id="weeklyWeatherBtn">
                                 See weekly forcast
                             </a>
                         </div>
@@ -193,17 +212,20 @@
                                     <strong>Name:</strong> <span id="rewardAdminName">Admin User</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong><i class="fa-solid fa-coins"></i> Total Points:</strong> <span id="rewardPoints">120</span>
+                                    <strong><i class="fa-solid fa-coins"></i> Total Points:</strong> <span
+                                        id="rewardPoints">120</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong><i class="fa-solid fa-gifts"></i> Available Rewards:</strong> <span id="availableRewards">3</span>
+                                    <strong><i class="fa-solid fa-gifts"></i> Available Rewards:</strong> <span
+                                        id="availableRewards">3</span>
                                 </li>
                                 <li class="list-group-item app-tile">
-                                    <strong><i class="fa-solid fa-clock-rotate-left"></i> Last Rewards Redeemed:</strong> <span id="lastRedeemed">None</span>
+                                    <strong><i class="fa-solid fa-clock-rotate-left"></i> Last Rewards
+                                        Redeemed:</strong> <span id="lastRedeemed">None</span>
                                 </li>
                             </ul>
 
-                            <a href="404.html" class="btn btn-primary app-btn" id="redeemRewardsBtn">
+                            <a href="404.html" class="btn  app-btn" id="redeemRewardsBtn">
                                 Redeem Rewards
                             </a>
                         </div>
