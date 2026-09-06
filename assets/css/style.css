@@ -384,3 +384,13 @@ footer {
     padding: 1rem 0;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    #widgets .app-card {
+        height: 600px;
+    }
+
+    #widgets .app-card .app-btn {
+        margin-top: auto;
+    }
+}
