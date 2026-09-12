@@ -129,6 +129,10 @@ body {
     margin: 0 auto 2rem auto;
 }
 
+.index-page i {
+    color: var(--primary-color);
+}
+
 /* Home page styling */
 .section-divider {
     height: 2px;
